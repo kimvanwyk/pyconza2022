@@ -1,6 +1,8 @@
 wafer >= 0.8.0
 Django >=2.0, <3.1
-psycopg2-binary
+# We need to pin to before 2.9 because of how time zone handled changed in django and
+# later pycopg2 versons
+psycopg2-binary < 2.9
 mdx_outline
 mdx_attr_cols
 mdx_variables
