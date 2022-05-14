@@ -5,3 +5,7 @@ localstatic/
 localmedia/
 localsettings.py
 *uwsgi*
+ve/
+wsgi.py
+__pycache__/
+package-lock.json
