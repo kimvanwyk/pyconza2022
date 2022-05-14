@@ -1,0 +1,540 @@
+html {
+  background: black;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Source Sans Pro';
+}
+
+#wrap {
+  min-height: 100%;  /* put the background behind the clouds -- see CLOUDS further down */
+  background: url("../img/clouds_top.png"), url("../img/clouds_bottom.png"), url("../img/pattern.png"), black;
+  background-repeat: repeat-y, no-repeat, repeat, repeat;
+  background-position: top center, bottom center, 0 0, 0
+}
+
+#main {
+  color: white;
+  padding-top: 1em;
+}
+
+#main .popover-content,
+#main .popover-title {
+  color: black;
+}
+
+#main .form-actions {
+  background: inherit;
+  border: none;
+  padding: 0px;
+}
+
+#main .well {
+  color: black;
+}
+
+#main .well:after {
+  /* ensure wells contain all their floating content */
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#main h1 {
+  margin: 0;
+  padding: 0 24px;
+  line-height: 47px;
+  background-color: black;
+  background-image: linear-gradient(to left, #0a2463, black);
+  font-family: 'Alegreya';
+  font-size: 30px;
+  font-weight: bold;
+  color: #56a4ca;
+}
+
+#main section {
+  width: 100%;
+  float: left;
+  padding: 0 10px 10px 10px;
+  color: black;
+  background: #fd7970;
+  margin-bottom: 1em;
+  background-image: linear-gradient(to left, #e2e2e2, #fd7970);
+}
+
+#main section section {
+  background: rgba(226, 226, 226, 0.75);
+  box-shadow: 2px 2px 15px -5px #b83c3a;
+}
+
+#main section h1,
+#main section section h2 {
+  margin: 0 -10px;
+  padding: 0 24px;
+  background-color: black;
+  background-image: linear-gradient(to left, #0a2463, black);
+  font-family: 'Alegreya';
+  font-weight: bold;
+  color: #56a4ca;
+  margin-bottom: 0.5em;
+}
+
+#main section h1 {
+  line-height: 47px;
+  font-size: 30px;
+}
+
+#main section h2 {
+  line-height: 38px;
+  font-size: 24px;
+}
+
+#main section p {
+  padding-left: 12px;
+}
+
+#main li p {
+  padding-left: 0;
+}
+
+#main table {
+  width: 100%;
+}
+
+#main table tr {
+  border-bottom: 1px solid #9d9c9b;
+}
+
+#main table th,
+#main table td {
+  padding: 8px 12px;
+  text-align: left;
+  border: 1px solid #9d9c9b;
+  background: rgba(226, 226, 226, 0.75);
+  font-size: 16px;
+  color: black;
+}
+
+#main table td.title {
+  background-color: black;
+  background-image: linear-gradient(to left, #0a2463, black);
+  border: 1px solid #605f5e;
+  font-size: 16px;
+  color: #56a4ca;
+  line-height: 26px;
+}
+
+#main table th,
+#main table td.scheduleslot {
+  background: #247ba0;
+  color: white;
+  border: 1px solid #605f5e;
+  font-weight: normal;
+  vertical-align: top;
+}
+
+#main table th a {
+  color: white;
+}
+
+#main table td a {
+  color: #0a2463;
+}
+
+#main table td.title a {
+  color: #56a4ca;
+}
+
+#main table td a:hover {
+  color: #56a4ca;
+}
+
+#main table th a:hover,
+#main table td.title a:hover {
+  color: #9d9c9b;
+}
+
+#main table th span {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  line-height: 26px;
+}
+
+#notes a {
+  color: #0a2463;
+}
+
+/* Highlights */
+
+#main table td.schedule {
+  background: rgba(226, 226, 226, 0.75);
+  border: solid 1px #9d9c9b;
+}
+
+#main table td.schedule-break {
+  background: #3c478d;
+  color: #9d9c9b;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#main table td.talk-type-keynote {
+  background: rgba(226, 226, 226, 0.75);
+  background-image: linear-gradient(to left, #56a4ca, #fb3640);
+  text-align: center;
+}
+
+#main table td.talk-type-panel {
+  background: rgba(226, 226, 226, 0.75);
+  background-image: linear-gradient(to left, #56a4ca, #fd7970);
+  text-align: center;
+}
+
+#main table td.unavailable {
+  background: #605f5e;
+  font-size: 16px;
+  color: #247ba0;
+  line-height: 26px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#main table th.schedule-highlight-venue {
+   filter: brightness(150%);
+}
+
+#main table td.schedule-highlight-venue a {
+   color: #56a4ca;
+}
+
+/* We unset the highlight-venue effect for breaks using CSS ordering */
+#main table td.schedule-break a {
+  color: #e2e2e2;
+}
+
+#main table td.schedule-break a:hover {
+  color: #56a4ca;
+}
+
+#main table td.talk-type-keynote a,
+#main table td.talk-type-panel a {
+  color: #0a2463;
+}
+
+#main table td.talk-type-keynote a:hover,
+#main table td.talk-type-panel a:hover {
+  color: #e2e2e2;
+}
+
+#main table td.schedule-placeholder {
+  background: #8698b0;
+  border: solid 1px #9d9c9b;
+  font-style: italic;
+}
+
+#main table td.schedule-placeholder a {
+  color: rgba(0, 38, 66, 0.5);
+}
+
+#main table td.unavailable a {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+#logos {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#logos img {
+  padding: 10px 20px;
+}
+
+#legal {
+  text-align: center;
+  font-family: 'Alegreya';
+  font-size: 30px;
+  color: white;
+  padding-bottom: 15px;
+}
+
+#credits {
+  text-align: center;
+  font-family: 'Alegreya';
+  font-size: 20px;
+  color: #b83c3a;
+  line-height: 22px;
+  padding-bottom: 20px;
+}
+
+#credits a {
+  color: #247ba0;
+}
+
+#logo_bottom {
+  /* this padding needs to be big enough to avoid clouds_bottom.png covering text. */
+  padding-bottom: 199px;
+  text-align: center;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  background: black;
+  color: #b83c3a;
+  width: 100%;
+  clear: both;
+  padding: 10px 0px;
+  text-align: center;
+  z-index: 100;
+}
+
+#wafer-edit-schedule-bucket {
+  background: #ccc;
+}
+
+.wafer-speakers .wafer-speakers-logo img {
+  border-radius: 50%;
+  border: 4px solid #247ba0;
+  padding: 10px;
+}
+
+.wafer-speakers .wafer-speakers-logo {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.wafer-speakers .wafer-speakers-name {
+  text-align: center;
+  margin-bottom: 1.0em;
+}
+
+.wafer-profile #profile-avatar {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.wafer-profile #profile-avatar img {
+  border-radius: 50%;
+  border: 4px solid #247ba0;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.wafer.list div:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.wafer.list div:nth-child(2n + 1) {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+}
+
+/* Talks on profile pages */
+
+.card {
+    background: rgba(226, 226, 226, 0.75);
+    border-radius: 0;
+}
+
+.card a {
+    color: #0a2463;
+}
+
+.card a:hover,
+.card a:focus {
+  color: #b83c3a;
+}
+
+/* fix icons on top nav bar */
+ul.navbar-nav li.icon a {
+  padding: 12px;
+}
+
+/* override buttons */
+
+ul.btn-group {
+  list-style: none;
+}
+
+.btn-primary {
+  margin: 0 0 2px 2px;
+  background-color: #247ba0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: white !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #3c478d;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #247ba0;
+  text-shadow: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background-color: #605f5e;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-secondary {
+  margin: 0 0 4px 4px;
+  background-color: #247ba0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: white !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active {
+  background-color: #3c478d;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+.btn-secondary.disabled,
+.btn-secondary[disabled] {
+  background-color: #605f5e;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a.btn, table a, nav a, #wafer-sponsors a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #fd7970;
+}
+
+#main section a, #main section section a {
+  color: #0a2463;
+}
+
+#main section a:hover,
+#main section a:focus,
+#main section section a:hover,
+#main section section a:focus {
+  color: #b83c3a;
+}
+
+#main section h1 a, #main section section h2 a {
+  color: #56a4ca;
+  text-decoration: none;
+}
+
+#main section h1 a:hover,
+#main section h1 a:focus,
+#main section section h2 a:hover,
+#main section section h2 a:focus {
+  color: #fd7970;
+  text-decoration: none;
+}
+
+/* NAV */
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+  color: #fd7970;
+  padding: 10px;
+  margin: 0px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-brand:focus,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: #247ba0;
+}
+
+.navbar-dark .navbar-nav li.dropdown > .dropdown-toggle .caret,
+.navbar-dark .navbar-nav li.dropdown > .dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  color: black;
+  background-color: #247ba0;
+  background-image: linear-gradient(to left, #56a4ca, #fb3640);
+}
+
+.container-fluid {
+  padding-top: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+  background: linear-gradient(to left, #0a2463, black) ! important;
+  font-family: 'Source Sans Pro', 'sans serif';
+}
+
+.pull-right {
+  margin: 0;
+}
+
+.profile-links {
+  padding: 25px;
+  align-items: flex-end;
+}
+
+form {
+  background: #fd7970;
+  background-image: linear-gradient(to left, #e2e2e2, #fd7970);
+  padding: 10px;
+  color: black;
+}
+
+.text-muted {
+    color: #3b3a39 !important;
+    font-style: italic;
+}
+
+@media only screen and (max-device-width:768px) {
+  #footer {
+    position: static;
+  }
+
+  .mobile-center {
+    text-align: center;
+  }
+
+}
+
+/* sponsor page:
+
+   * constrain logos to page width for phones.
+   * should probably be made the default in wafer.
+*/
+
+.sponsor-detail div,
+.wafer-sponsor .card-title + div {
+    padding: 0.5em !important;
+    max-width: 100% !important;
+}
+
+.sponsor-detail div img,
+.wafer-sponsor .card-title + div img {
+    max-width: 100% !important;
+}
